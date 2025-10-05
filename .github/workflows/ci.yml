@@ -25,4 +25,6 @@ jobs:
               run:  test -z $(go fmt ./...)
 
             - name: Lint
-              run:  go staticcheck ./...
+              uses: dominikh/staticcheck-action@v1
+              with:
+                version: "latest"
